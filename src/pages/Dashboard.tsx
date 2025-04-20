@@ -7,7 +7,7 @@ import ProfileCard from '@/components/profile/ProfileCard';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { CircleDollarSign, Star, Briefcase, AlertTriangle } from 'lucide-react';
 
-// Mock project data
+// Define the project data with properly typed status values
 const activeProjects = [
   {
     id: '1',
@@ -16,7 +16,7 @@ const activeProjects = [
     budget: '$3,000 - $5,000',
     deadline: 'Jun 15, 2025',
     skills: ['Solidity', 'React', 'Smart Contracts'],
-    status: 'in-progress',
+    status: 'in-progress' as const,
   },
   {
     id: '2',
@@ -25,7 +25,7 @@ const activeProjects = [
     budget: '$1,500 - $2,500',
     deadline: 'May 30, 2025',
     skills: ['UI/UX', 'Figma', 'Web3'],
-    status: 'in-progress',
+    status: 'in-progress' as const,
   },
 ];
 
@@ -37,7 +37,7 @@ const completedProjects = [
     budget: '$4,000',
     deadline: 'Completed May 10, 2025',
     skills: ['Solidity', 'Security', 'Audit'],
-    status: 'completed',
+    status: 'completed' as const,
   },
 ];
 
